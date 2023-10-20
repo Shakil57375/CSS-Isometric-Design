@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+}
+
+.container {
+    display: block;
+    background: rgba(255, 255, 255, 0.31);
+    box-shadow: rgba(0, 0, 0.2);
+    backdrop-filter: blur(1.9px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.container:hover>.current {
+    color: black !important;
+}
+
+.container .slider {
+    position: absolute;
+    font-size: 1.2rem;
+    width: 20%;
+    min-width: 4.25em;
+    transition: 0.3s;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background: yellow;
+    height: 100%;
+}
+
+.year {
+    width: 20%;
+    min-width: 4.25em;
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 0.75em 1em;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.year:nth-child(1).current~.slider {
+    transform: translateX(0);
+}
+
+.year:nth-child(2).current~.slider {
+    transform: translateX(100%);
+}
+
+.year:nth-child(3).current~.slider {
+    transform: translateX(200%);
+}
+
+.year:nth-child(4).current~.slider {
+    transform: translateX(300%);
+}
+
+.year:nth-child(5).current~.slider {
+    transform: translateX(400%);
+}
+
+.year:nth-child(1).current~.slider {
+    transform: translateX(0);
+}
+
+.year:nth-child(2).current~.slider {
+    transform: translate(0);
+}
+
+.year:nth-child(2).current~.slider {
+    transform: translate(0);
+}
